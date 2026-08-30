@@ -172,7 +172,7 @@ and are written in lexicographical order.
 
 The Boolean search implementation is in `src/boolean_search.py`.
 
-The assignment requires queries containing two words and either `AND` or `OR`.
+We require queries containing two words and either `AND` or `OR`.
 
 Examples:
 
