@@ -1,6 +1,7 @@
 # IR Assignment 1 — Boolean Retrieval over the Cranfield Collection
 
-Group name used for output file naming: **Normal_Group**
+Group name: **Normal_Group**
+Name used for output file naming: **Normal_Group**
 
 ## Files
 
@@ -12,13 +13,14 @@ Group name used for output file naming: **Normal_Group**
 - `src/boolean_search.py` — Boolean AND/OR query engine.
 - `Normal_Group_processed.all` — generated preprocessed collection.
 - `Normal_Group_cran.index` — generated inverted index.
-
+- `METHODOLOGY.md` — methodology and implementation details.
+- 
 ## How it works
 
 ### 1. Preprocessing (`src/preprocess.py`)
 
 Only the `.T` (title) and `.W` (abstract) fields of each document are used;
-`.A` and `.B` are ignored, per the assignment.
+`.A` and `.B` are ignored, as required.
 
 Four separate functions implement the four required steps:
 
@@ -77,9 +79,9 @@ prints the matching docids as a comma-separated list.
 
 Batch mode (one query per line):
 ```bash
-python src/boolean_search.py Normal_Group_cran.index --queries queries.txt --output results.txt
+python src/boolean_search.py Normal_Group_cran.index --queries query.txt --output result.txt
 ```
-writes `<query> : <docid,docid,...>` per line to `results.txt`.
+writes `<query> : <docid,docid,...>` per line to `result.txt`.
 
 ## Regenerating everything
 
