@@ -1,5 +1,0 @@
-aerodynamics AND slipstream
-experimental OR theory
-boundary AND layer
-supersonic OR hypersonic
-flow AND calculation
