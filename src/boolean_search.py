@@ -125,9 +125,15 @@ def main():
                     continue
                 try:
                     found = solve(query, index, stemr)
-                    items.append(f"{query} : {chars(found)}")
+                    items.append(f"Query: {query}")
+                    items.append(f"Count: {len(found)}")
+                    items.append(f"DocIDs: {chars(found)}")
+                    items.append("-" * 40)
                 except ValueError as e:
-                    items.append(f"{query} : ERR")
+                    items.append(f"Query: {query}")
+                    items.append("Count: 0")
+                    items.append("DocIDs: ERR")
+                    items.append("-" * 40)
 
         text = "\n".join(items)
         if ofile:
